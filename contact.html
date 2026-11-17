@@ -1,0 +1,21 @@
+---
+layout: default
+title: Contact
+description: Start a conversation with Valterra Group & Co.
+permalink: /contact.html
+---
+<section class="page-hero"><div class="wrap"><p class="eyebrow in-up">Contact</p><h1 class="in-up d2">Start a<br><span class="gold-t">conversation.</span></h1></div></section>
+<section><div class="wrap split">
+<div class="reveal"><p>Tell us about your business and the package you are interested in. We will respond by email.</p>
+<p class="mut">Direct email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p></div>
+<form class="card reveal" id="contact-form" method="post" action="{{ site.form_endpoint }}" data-endpoint="{{ site.form_endpoint }}" data-email="{{ site.email }}">
+<label for="name">Full name</label><input id="name" name="name" required autocomplete="name">
+<label for="business">Business name</label><input id="business" name="business" autocomplete="organization">
+<label for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email">
+<label for="package">Package</label>
+<select id="package" name="package"><option value="">Not sure yet</option>{% for p in site.packages %}<option>{{ p.name }} — {{ p.price }}/month</option>{% endfor %}</select>
+<label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea>
+<button class="btn solid" type="submit">Send enquiry</button>
+<p id="form-status" class="mut" role="status" aria-live="polite"></p>
+</form>
+</div></section>

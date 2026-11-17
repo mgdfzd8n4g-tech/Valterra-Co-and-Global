@@ -1,0 +1,19 @@
+---
+layout: default
+title: Pricing
+description: Valterra Group & Co. monthly packages — Essential R1,999, Growth R3,999, Elite R7,999.
+permalink: /pricing.html
+---
+<section class="page-hero"><div class="wrap"><p class="eyebrow in-up">Pricing</p><h1 class="in-up d2">Packages built<br><span class="gold-t">to scale with you.</span></h1></div></section>
+<section><div class="wrap grid pricing">
+{% for p in site.packages %}
+<div class="card price reveal{% if p.popular %} pop{% endif %}">
+{% if p.popular %}<span class="badge">Popular Choice</span>{% endif %}
+<h3>{{ p.name | upcase }}</h3>
+<p class="amt">{{ p.price }}<small> / MONTH</small></p>
+<p class="mut">{{ p.blurb }}</p>
+<ul class="tick">{% for i in p.items %}<li>{{ i }}</li>{% endfor %}</ul>
+<a class="btn {% if p.popular %}solid{% else %}ghost{% endif %}" href="{{ '/contact.html?package=' | append: p.name | relative_url }}" target="_blank" rel="noopener">Choose {{ p.name }}</a>
+</div>
+{% endfor %}
+</div></section>

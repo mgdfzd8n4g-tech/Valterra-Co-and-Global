@@ -1,0 +1,48 @@
+title: Valterra Group & Co.
+tagline: Building Beyond Boundaries.
+description: Valterra Group & Co. is a marketing partner delivering social media management, content creation, digital advertising and brand strategy.
+url: ""
+baseurl: ""
+email: hello@example.com          # CHANGE: your real business email
+form_endpoint: ""                 # e.g. https://formspree.io/f/xxxxxxx (see README)
+markdown: kramdown
+exclude: [Gemfile, Gemfile.lock, README.md, vendor]
+
+services:
+  - title: Social Media Management
+    n: "01"
+    short: Consistent, on-brand presence across the platforms that matter.
+    desc: We plan, schedule, publish and monitor your social channels, keeping your brand voice consistent and your audience engaged, with reporting that shows what is working.
+  - title: Content Creation
+    n: "02"
+    short: Visuals and copy built to hold attention and reflect your brand.
+    desc: From post design to written copy, we produce content shaped by your brand strategy, so every piece looks professional and supports a clear commercial purpose.
+  - title: Digital Advertising
+    n: "03"
+    short: Targeted campaigns managed with discipline and clear reporting.
+    desc: We set up, run and refine paid campaigns, focusing on the right audiences, sensible budgets and transparent performance reporting.
+  - title: Brand Strategy
+    n: "04"
+    short: Positioning and direction that give your marketing a foundation.
+    desc: We help define who you serve, how you sound and where you stand in your market, creating a framework that guides every campaign and message.
+
+values:
+  - { name: Integrity, text: "We act with honesty and transparency in every engagement." }
+  - { name: Excellence, text: "We hold our work to a high, consistent standard." }
+  - { name: Strategy, text: "We plan with intent, with the long term in mind." }
+  - { name: Partnership, text: "We grow when our clients grow." }
+
+packages:
+  - name: Essential
+    price: "R1,999"
+    blurb: For small businesses looking to establish a professional digital presence.
+    items: [Social media management, 8 social media posts monthly, Basic content creation, Monthly performance report]
+  - name: Growth
+    price: "R3,999"
+    popular: true
+    blurb: For growing businesses ready to strengthen their brand and reach.
+    items: [Social media management, "12–16 posts monthly", Content strategy, Advertising campaign management, Monthly analytics report]
+  - name: Elite
+    price: "R7,999"
+    blurb: For established businesses seeking a comprehensive marketing partner.
+    items: [Full social media management, 20+ monthly posts, Premium content creation, Marketing strategy, Advertising campaign management, Monthly strategy consultation]

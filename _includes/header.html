@@ -1,0 +1,12 @@
+<header>
+<div class="wrap nav">
+<a class="logo" href="{{ '/' | relative_url }}" target="_blank" rel="noopener" aria-label="Valterra Group & Co. home"><i></i>VALTERRA</a>
+<button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+<ul class="menu" id="menu">
+{% assign links = "Home|/index.html,About|/about.html,Services|/services.html,Pricing|/pricing.html,Contact|/contact.html" | split: "," %}
+{% for l in links %}{% assign p = l | split: "|" %}
+<li><a href="{{ p[1] | relative_url }}" target="_blank" rel="noopener"{% if page.url == p[1] or page.url == '/' and p[1] == '/index.html' %} class="on" aria-current="page"{% endif %}>{{ p[0] }}</a></li>
+{% endfor %}
+</ul>
+</div>
+</header>

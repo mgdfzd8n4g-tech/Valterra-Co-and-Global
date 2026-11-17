@@ -1,0 +1,75 @@
+---
+layout: default
+title: Building Beyond Boundaries
+description: Valterra Group & Co. — premium social media management, content, advertising and brand strategy.
+permalink: /index.html
+---
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<p class="eyebrow in-up">Valterra Group &amp; Co.</p>
+<h1><span class="l1">Building Brands.</span><span class="l2">Creating Momentum.</span><span class="l3 gold-t">Beyond Boundaries.</span></h1>
+<p class="lead in-up d4">{{ site.tagline }} A strategic marketing partner for businesses with long-term ambition.</p>
+<div class="btns in-up d5">
+<a class="btn solid" href="{{ '/services.html' | relative_url }}" target="_blank" rel="noopener">Explore Our Services</a>
+<a class="btn ghost" href="{{ '/contact.html' | relative_url }}" target="_blank" rel="noopener">Start a Conversation</a>
+</div>
+</div>
+<div class="orbit" aria-hidden="true" data-parallax="0.15">
+<span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+<span class="core"></span><span class="shape s1"></span><span class="shape s2"></span><span class="shape s3"></span>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap split reveal">
+<div><p class="eyebrow">About</p><h2>A partner built for the long term.</h2></div>
+<div><p>Valterra Group &amp; Co. helps businesses build a credible, consistent and growing brand presence. We combine strategy, creativity and disciplined execution so your marketing supports where your business is heading.</p>
+<p><a class="more" href="{{ '/about.html' | relative_url }}" target="_blank" rel="noopener">Read more about us &rarr;</a></p></div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<p class="eyebrow reveal">Services</p><h2 class="reveal">What we do.</h2>
+<div class="grid">
+{% for s in site.services %}
+<article class="card reveal"><span class="num">{{ s.n }}</span><h3>{{ s.title }}</h3><p>{{ s.short }}</p></article>
+{% endfor %}
+</div>
+<p class="reveal"><a class="more" href="{{ '/services.html' | relative_url }}" target="_blank" rel="noopener">All services &rarr;</a></p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<p class="eyebrow reveal">Values</p><h2 class="reveal">What guides us.</h2>
+<div class="grid">
+{% for v in site.values %}<div class="card reveal"><h3>{{ v.name }}</h3><p>{{ v.text }}</p></div>{% endfor %}
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<p class="eyebrow reveal">Pricing</p><h2 class="reveal">Clear monthly packages.</h2>
+<div class="grid">
+{% for p in site.packages %}
+<div class="card price reveal{% if p.popular %} pop{% endif %}">
+{% if p.popular %}<span class="badge">Popular Choice</span>{% endif %}
+<h3>{{ p.name }}</h3><p class="amt">{{ p.price }}<small> / month</small></p>
+</div>
+{% endfor %}
+</div>
+<p class="reveal"><a class="more" href="{{ '/pricing.html' | relative_url }}" target="_blank" rel="noopener">Compare packages &rarr;</a></p>
+</div>
+</section>
+
+<section>
+<div class="wrap cta reveal">
+<h2>Ready to build beyond boundaries?</h2>
+<p class="mut">Tell us about your business and goals.</p>
+<a class="btn solid" href="{{ '/contact.html' | relative_url }}" target="_blank" rel="noopener">Start a Conversation</a>
+</div>
+</section>
